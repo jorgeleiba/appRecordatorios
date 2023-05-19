@@ -1,0 +1,7 @@
+{
+  "name": "app-recordatorios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
