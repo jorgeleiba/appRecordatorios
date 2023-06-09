@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Configuración de alarma
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <!-- <ion-label>Hora de la alarma</ion-label> -->
+    <ion-datetime displayFormat="h:mm A" [(ngModel)]="horaSeleccionada"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Mensaje de la alarma</ion-label>
+    <ion-input type="text" [(ngModel)]="mensaje"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="programarAlarma()">Programar alarma</ion-button>
+</ion-content>
+
+  

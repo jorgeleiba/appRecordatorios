@@ -4,13 +4,31 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: '/calendario',
     pathMatch: 'full'
   },
+
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+    path: 'newreminder',
+    loadChildren: () => import('./pages/newreminder/newreminder.module').then( m => m.NewreminderPageModule)
+  },
+  {
+    path: 'myreminders',
+    loadChildren: () => import('./pages/myreminders/myreminders.module').then( m => m.MyremindersPageModule)
+  },
+  {
+    path: 'next',
+    loadChildren: () => import('./pages/next/next.module').then( m => m.NextPageModule)
+  },
+  {
+    path: 'past',
+    loadChildren: () => import('./pages/past/past.module').then( m => m.PastPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+
 ];
 
 @NgModule({

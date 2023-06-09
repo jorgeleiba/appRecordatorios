@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de alarmas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let alarma of alarmas">
+      <ion-label>{{ alarma.title }}</ion-label>
+      <ion-button color="danger" slot="end" (click)="cancelarAlarma(alarma.id)">
+        Cancelar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

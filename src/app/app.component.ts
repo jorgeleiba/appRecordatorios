@@ -1,18 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent{
+  public selectedIndex = 0;
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    {
+      title: 'Nuevo recordatorio',
+      url: '/newreminder',
+      icon: 'create'
+    },
+    { 
+      title: 'Mis recordatorios', 
+      url: '/myreminders', 
+      icon: 'time' 
+    },
+    { 
+      title: 'Próximos', 
+      url: '/next', 
+      icon: 'arrow-redo' 
+    },
+    { 
+      title: 'Pasados', 
+      url: '/past', 
+      icon: 'arrow-undo' 
+    },
+    { 
+      title: 'Calendario', 
+      url: '/calendario', 
+      icon: 'calendar' 
+    },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [''];
   constructor() {}
 }
