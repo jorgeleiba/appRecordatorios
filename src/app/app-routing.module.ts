@@ -17,14 +17,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/myreminders/myreminders.module').then( m => m.MyremindersPageModule)
   },
   {
-    path: 'next',
-    loadChildren: () => import('./pages/next/next.module').then( m => m.NextPageModule)
-  },
-  {
-    path: 'past',
-    loadChildren: () => import('./pages/past/past.module').then( m => m.PastPageModule)
-  },
-  {
     path: 'calendario',
     loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
   },

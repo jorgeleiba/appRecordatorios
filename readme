@@ -1,0 +1,27 @@
+## instalando firebase
+
+npm install -g firebase
+
+## instalando @angular/fire
+
+ng add @angular/fire
+
+## Luego lo importamos en el app.module.ts: (Esto se hace si la importacion no se genero automáticamente)
+
+import { AngularFireModule } from '@angular/fire/compat';
+AngularFireModule.initializeApp(environment.firebaseConfig)
+
+## En el archivo enviroments.ts copiamos el firebaseConfig obtenido de la página de nuestro proyecto en firebase
+
+firebaseConfig = {
+  apiKey: "AIzaSyCvLO-Iq3r5AjHWGjTZbOL5NKN0UEv9NVU",
+  authDomain: "app-recordatorios-f831d.firebaseapp.com",
+  projectId: "app-recordatorios-f831d",
+  storageBucket: "app-recordatorios-f831d.appspot.com",
+  messagingSenderId: "137280277626",
+  appId: "1:137280277626:web:8a9351d1c4634d7f027fc3"
+};
+
+## En la carpeta database.services se importa AngularFirestore y se inyecta en el constructor
+
+AngularFirestore es un servicio

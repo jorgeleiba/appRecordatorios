@@ -9,8 +9,8 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let alarma of alarmas">
-      <ion-label>{{ alarma.title }}</ion-label>
-      <ion-button color="danger" slot="end" (click)="cancelarAlarma(alarma.id)">
+      <ion-label>{{ alarma.mensaje }}</ion-label>
+      <ion-button color="danger" slot="end" (click)="mostrarAlarmas()">
         Cancelar
       </ion-button>
     </ion-item>

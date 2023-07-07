@@ -18,16 +18,6 @@ export class AppComponent{
       icon: 'time' 
     },
     { 
-      title: 'Próximos', 
-      url: '/next', 
-      icon: 'arrow-redo' 
-    },
-    { 
-      title: 'Pasados', 
-      url: '/past', 
-      icon: 'arrow-undo' 
-    },
-    { 
       title: 'Calendario', 
       url: '/calendario', 
       icon: 'calendar' 

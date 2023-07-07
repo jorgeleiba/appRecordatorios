@@ -7,14 +7,23 @@ import { IonicModule } from '@ionic/angular';
 import { NewreminderPageRoutingModule } from './newreminder-routing.module';
 
 import { NewreminderPage } from './newreminder.page';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../../../environments/environment.prod';
+import { DatabaseService } from 'src/app/services/database.service';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NewreminderPageRoutingModule
+    NewreminderPageRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
+  providers: [DatabaseService],
   declarations: [NewreminderPage]
 })
 export class NewreminderPageModule {}

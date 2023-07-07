@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
   selector: 'app-myreminders',
@@ -9,20 +9,19 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 export class MyremindersPage{
 
   alarmas!: any[];
-
-  constructor(private localNotifications: LocalNotifications) {}
-
-  ionViewDidEnter() {
-    this.localNotifications.getAllScheduled().then((alarmas) => {
-      this.alarmas = alarmas;
-    });
-  }
   
-  cancelarAlarma(id: number) {
-    this.localNotifications.cancel(id);
-    // Actualizar la lista de alarmas después de cancelar una de ellas
-    this.localNotifications.getAllScheduled().then((alarmas) => {
-      this.alarmas = alarmas;
-    });
+  constructor(private database: DatabaseService) {}
+
+  cancelarAlarma(){
+
+  }
+
+  async mostrarAlarmas(){
+    this.database.getAll('alarmas');
   }
 }
+  
+ 
+
+ 
+  
